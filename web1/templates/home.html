@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+body {
+          background-image: url("https://www.boredart.com/wp-content/uploads/2017/10/Extremely-Beautiful-Pastel-Watercolor-Paintings4.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: blue;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 2em;
+}
+li a:hover {
+  background-color: ;
+}
+</style>
+</head>
+<body>
+
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+  <li><a href="{% url 'login' %}">Login</a></li>
+  <li><a href="{% url 'register' %}">Sign up</a></li>
+</ul>
+{% if user.is_authenticated %}
+ Hi!!!  {{user.username}}
+{% else %}
+LogIn First
+{% endif %}
+</body>
+</html>
